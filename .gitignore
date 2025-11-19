@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Bygg-output
+dist/
+build/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# Environment files (very important!)
+.env
+.env.*
+!.env.example   # allow example file
+
+# Editor stuff
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Temporary files
+.tmp/
+temp/

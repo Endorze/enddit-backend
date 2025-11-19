@@ -1,0 +1,41 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // ====== FILSTRUKTUR (BRA ATT HA FÖR BACKEND) ======
+    "rootDir": "./src",   // <-- lägg din TS-kod i src/
+    "outDir": "./dist",   // <-- kompilerad JS hamnar i dist/
+
+    // ====== NODE/EXPRESS-MILJÖ ======
+    "module": "commonjs",   // <-- enklast för Node + ts-node-dev
+    "target": "es2019",     // eller "ES2020" om du vill
+    "lib": ["ESNext"],      // <-- moderna JS-API:er
+    "types": ["node"],      // <-- så Node-API:er (process, __dirname osv) är typade
+    "esModuleInterop": true, // <-- så du kan skriva `import express from "express"`
+
+    // ====== OUTPUT ======
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // ====== STRICTARE TYPKOLL ======
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // ====== REKOMMENDERAT ======
+    "strict": true,
+    "skipLibCheck": true,
+
+    // Följande är mest relevanta för frontend/React/NodeNext-setup.
+    // De KAN vara kvar, men behövs egentligen inte i ett enkelt Express-backend.
+    // Vill du köra super-clean backend kan du kommentera bort dessa:
+
+    // "jsx": "react-jsx",                // <-- inte relevant i backend (ingen JSX här)
+    // "verbatimModuleSyntax": true,
+    // "isolatedModules": true,
+    // "noUncheckedSideEffectImports": true,
+    // "moduleDetection": "force"
+  },
+
+  // VAD SOM SKA TAS MED I PROJEKTET
+  "include": ["src"]
+}
